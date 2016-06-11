@@ -1,7 +1,7 @@
 ---
-title: Blog
+title: Posts
 description: Recent posts
-permalink: blog/
+permalink: posts/
 menu: 1
 octicon: book
 ---
