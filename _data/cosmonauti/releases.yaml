@@ -1,0 +1,37 @@
+- title: Surfin' with
+  support: 7 inches
+  year: 1995
+  label: Reverendo Moon Records
+  tracks:
+    -
+      title: The wedge
+      author: Dick Dale
+      year: 1963
+      file: Wedge
+    -
+      title: Sea storm
+      author: Giustiniani / Petrozzi
+      year: 1994
+      file: SeaStorm
+
+- title: Just surf
+  support: CD/LP
+  year: 1998
+  label: Omom records
+  tracks:
+    -
+      title: Maserati
+      author: Giustiniani / Petrozzi
+      year: 1998
+      file: Maserati
+
+- title: Bikini Angel
+  support: CD
+  year: 2003
+  label: Omom records
+  tracks:
+    -
+      title: Bikini Angel
+      author: Giustiniani / Petrozzi
+      year: 2003
+      file: BikiniAngel
