@@ -7,7 +7,8 @@ var metadata = document.querySelector('head').dataset;
 console.log('page canonical url: ' + canonical,
             'owner: ' + metadata.owner,
             'repo: ' + metadata.project,
-            'on github: ' + metadata.repo);
+            'page_url: ' + metadata.pageUrl,
+            'page_path: ' + metadata.pagePath);
 
 // olds
 var host = window.location.host;
@@ -33,17 +34,6 @@ window.onload = function(){
 
   var pagePath = document.getElementById('pagePath').getAttribute('href');
   var elepag = document.querySelector("section nav");
-
-  // Link active class on menu
-  // var listItems = document.querySelectorAll("header nav a");
-  // for (var variable in listItems) {
-  //   if (listItems.hasOwnProperty(variable)) {
-  //     if( listItems[variable].getAttribute('href') == perm ){
-  //       var ele = listItems[variable];
-  //       ele.classList.add('live');
-  //     }
-  //   }
-  // }
 
   // OWNER OR GUEST
   if ( localStorage.getItem( 'beyond-blog.thisRepository' ) ){
