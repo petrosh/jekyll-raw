@@ -1,0 +1,27 @@
+{
+  "name": "werwer",
+  "size": 0,
+  "children": [
+    {
+      "name": "sdfsdfsdf",
+      "size": 34,
+      "children": [
+        {
+          "name": "zio",
+          "size": 11,
+          "children": []
+        },
+        {
+          "name": "franco",
+          "size": 33,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "werere",
+      "size": 33,
+      "children": []
+    }
+  ]
+}

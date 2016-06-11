@@ -6,65 +6,272 @@ permalink: github/projects/
 menu: 5
 octicon: bookmark
 js:
+  - d3/d3.v3.min
   - projects/jsoneditor
 ---
+<style media="screen">
+.auto {
+fill: #000;
+}
+.steelblue{
+fill: steelblue;
+}
+
+.node {
+cursor: pointer;
+}
+
+.node circle {
+fill: #fff;
+stroke: steelblue;
+stroke-width: 3px;
+}
+
+.node text {
+font: 20px Consolas;
+text-transform: capitalize;
+}
+
+.link {
+fill: none;
+stroke: #ddd;
+stroke-width: 3px;
+opacity: .2;
+}
+</style>
 <div id='editor_holder'></div>
+<span id='valid_indicator'></span>
 <button id='submit'>Submit</button>
 <script>
-  var jsonSchema = {
-      type: "object",
-      title: "Car",
-      properties: {
-        make: {
-          title: "Produttore",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-          type: "string",
-          enum: [
-            "Toyota",
-            "BMW",
-            "Honda",
-            "Ford",
-            "Chevy",
-            "VW"
-          ]
-        },
-        model: {
-          title: "Model",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-          type: "string"
-        },
-        year: {
-          title: "Year",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-          type: "integer",
-          enum: [
-            1995,1996,1997,1998,1999,
-            2000,2001,2002,2003,2004,
-            2005,2006,2007,2008,2009,
-            2010,2011,2012,2013,2014
-          ],
-          default: 2008
-        },
-        color: {
-          "type": "string",
-          "title": "Color",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-          "format": "color",
-          "default": "#fff"
+
+var starting_schema, starting_value, root="";
+
+// url (required), options (optional)
+  var myRequest = new Request('/assets/js/projects/projects.json');
+  fetch(myRequest).then(function(response) {
+    return response.json().then(function(json) {
+      // This is the starting value for the editor
+      // We will use this to seed the initial editor
+      // and to provide a "Restore to Default" button.
+      starting_value = json;
+      design(starting_value);
+      schema();
+    });
+  });
+
+  function schema(){
+    var myRequest = new Request('/assets/js/projects/schema.json');
+    fetch(myRequest).then(function(response) {
+      return response.json().then(function(json) {
+        // This is the starting value for the editor
+        // We will use this to seed the initial editor
+        // and to provide a "Restore to Default" button.
+        starting_schema = json;
+        // console.log(starting_schema);
+        go();
+      });
+    });
+  }
+
+  function go(){
+
+    // Initialize the editor
+    var editor = new JSONEditor(document.getElementById('editor_holder'),{
+      // Enable fetching schemas via ajax
+      ajax: true,
+
+      // The schema for the editor
+      schema: starting_schema,
+
+      // Seed the form with a starting value
+      startval: starting_value,
+
+      // Disable additional properties
+      // false if you need additional properties
+      no_additional_properties: false,
+
+      // Require all properties by default
+      required_by_default: false,
+
+      // ADDED
+      disable_properties: true,
+      disable_edit_json: true,
+      disable_array_reorder: false
+    });
+
+    // Hook up the submit button to log to the console
+    document.getElementById('submit').addEventListener('click',function() {
+      // Get the value from the editor
+      console.log(editor.getValue());
+    });
+
+    // Hook up the validation indicator to update its
+    // status whenever the editor changes
+    editor.on('change',function() {
+      // Get an array of errors from the validator
+      var errors = editor.validate();
+
+      var indicator = document.getElementById('valid_indicator');
+
+      // Not valid
+      if(errors.length) {
+        console.log(errors);
+        indicator.style.color = 'red';
+        indicator.textContent = "not valid";
+      }
+      // Valid
+      else {
+        indicator.style.color = 'green';
+        indicator.textContent = "valid";
+      }
+    });
+  }
+
+  function design(json){
+    console.log(json);
+    var margin = {top: 20, right: 120, bottom: 20, left: 120},
+        width = 2000 - margin.right - margin.left,
+        height = 800 - margin.top - margin.bottom;
+
+    var i = 0,
+        duration = 750,
+        root;
+
+    var tree = d3.layout.tree()
+        .size([height, width]);
+
+    var diagonal = d3.svg.diagonal()
+        .projection(function(d) { return [d.y, d.x]; });
+
+    var svg = d3.select("header").append("svg")
+        .attr("width", width + margin.right + margin.left)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var color = d3.scale.category20c();
+
+    d3.json("/assets/js/projects/projects.json", function(error, flare) {
+      if (error) throw error;
+
+      root = flare;
+      root.x0 = height / 2;
+      root.y0 = 0;
+
+      function collapse(d) {
+        if (d.children) {
+          d._children = d.children;
+          d._children.forEach(collapse);
+          d.children = null;
         }
       }
-    };
 
-  // Initialize the editor with a JSON schema
-  var editor = new JSONEditor(document.getElementById('editor_holder'),{
-    schema: jsonSchema,
-    disable_properties: true,
-    disable_edit_json: true
-  });
+      root.children.forEach(collapse);
+      update(root);
+    });
 
-  // Hook up the submit button to log to the console
-  document.getElementById('submit').addEventListener('click',function() {
-    // Get the value from the editor
-    console.log(editor.getValue());
-  });
+    d3.select(self.frameElement).style("height", "1000px");
+
+    function update(source) {
+
+      // Compute the new tree layout.
+      var nodes = tree.nodes(root).reverse(),
+          links = tree.links(nodes);
+
+      // Normalize for fixed-depth.
+      nodes.forEach(function(d) { d.y = d.depth * 200; });
+
+      // Update the nodes…
+      var node = svg.selectAll("g.node")
+          .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+      // Enter any new nodes at the parent's previous position.
+      var nodeEnter = node.enter().append("g")
+          .attr("class", "node")
+          .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+          .on("click", click);
+
+      nodeEnter.append("circle")
+          .attr("r", 1e-6)
+          .style("stroke", function(d) { return d._children ? "steelblue" : "lightsteelblue"; })
+          .style("fill", function(d) { return d._children ? "lightsteelblue" : d.size; });
+
+      nodeEnter.append("text")
+          .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+          .attr("dy", function(d) { return d.children || d._children ? ".3em" : ".3em"; })
+          .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+          .attr("class", function(d) { return d.children || d._children ? "ink" : "steelblue"; })
+          .text(function(d) { return d.name; })
+          .style("fill-opacity", 1e-6);
+
+      // Transition nodes to their new position.
+      var nodeUpdate = node.transition()
+          .duration(duration)
+          .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+      nodeUpdate.select("circle")
+          .attr("r", 14.5)
+          .style("fill", function(d) { return d._children ? "lightsteelblue" : color(d.size); });
+
+      nodeUpdate.select("text")
+          .style("fill-opacity", 1);
+
+      // Transition exiting nodes to the parent's new position.
+      var nodeExit = node.exit().transition()
+          .duration(duration)
+          .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+          .remove();
+
+      nodeExit.select("circle")
+          .attr("r", 1e-6);
+
+      nodeExit.select("text")
+          .style("fill-opacity", 1e-6);
+
+      // Update the links…
+      var link = svg.selectAll("path.link")
+          .data(links, function(d) { return d.target.id; });
+
+      // Enter any new links at the parent's previous position.
+      link.enter().insert("path", "g")
+          .attr("class", "link")
+          .style("stroke", function(d) { return color(d.target.size); })
+          .attr("d", function(d) {
+            var o = {x: source.x0, y: source.y0};
+            return diagonal({source: o, target: o});
+          });
+
+      // Transition links to their new position.
+      link.transition()
+          .duration(duration)
+          .attr("d", diagonal);
+
+      // Transition exiting nodes to the parent's new position.
+      link.exit().transition()
+          .duration(duration)
+          .attr("d", function(d) {
+            var o = {x: source.x, y: source.y};
+            return diagonal({source: o, target: o});
+          })
+          .remove();
+
+      // Stash the old positions for transition.
+      nodes.forEach(function(d) {
+        d.x0 = d.x;
+        d.y0 = d.y;
+      });
+    }
+
+    // Toggle children on click.
+    function click(d) {
+      if (d.children) {
+        d._children = d.children;
+        d.children = null;
+      } else {
+        d.children = d._children;
+        d._children = null;
+      }
+      update(d);
+    }
+  }
 </script>

@@ -1,0 +1,39 @@
+{
+  "title": "Projects",
+  "$ref": "#/definitions/node",
+  "definitions": {
+    "node": {
+      "type": "object",
+      "id": "node",
+      "defaultProperties": [
+        "name"
+      ],
+      "patternProperties": {
+        "^.*$": {
+          "$ref": "#/definitions/node"
+        }
+      },
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "description": "Node name"
+        },
+        "size": {
+          "title": "Size",
+          "type": "number"
+        },
+        "children": {
+          "title": "Children",
+          "type": "array",
+          "format": "tabs",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

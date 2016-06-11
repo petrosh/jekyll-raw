@@ -1,0 +1,42 @@
+{
+  "$ref": "#/definitions/node",
+  "definitions": {
+    "node": {
+      "title": "Node",
+      "description": "Nodes have name, size and children list of nodes",
+      "type": "object",
+      "options": {
+        "collapsed": true
+      },
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "description": "Name of the node",
+          "default": ""
+        },
+        "size": {
+          "type": "number",
+          "title": "Size",
+          "description": "Size of the node",
+          "default": "0"
+        },
+        "children": {
+          "type": "array",
+          "title": "Childrens",
+          "description": "Array of children nodes",
+          "format": "tabs",
+          "items": {
+            "headerTemplate": "{{self.name}} ({{self.size}})",
+            "$ref": "#/definitions/node"
+          }
+        }
+      }
+    },
+    "required": [
+      "name",
+      "size",
+      "children"
+    ]
+  }
+}
