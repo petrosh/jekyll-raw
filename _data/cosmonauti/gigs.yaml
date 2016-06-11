@@ -1,3 +1,655 @@
 - date: 1995-02-18
-  city: Rome
-  venue: C. S. Villaggio Globale
+  city: ROMA
+  venue: C.S. Villaggio Globale
+
+- date: 1995-03-25
+  city: ROMA
+  venue: La Ludoteca
+
+- date: 1995-04-05
+  city: ROMA
+  venue: Frustone
+
+- date: 1995-04-14
+  city: ROMA
+  venue: Ditirambo
+
+- date: 1995-04-22
+  city: ROMA
+  venue: C.S. Brancaleone
+
+- date: 1995-04-28
+  city: GENOVA
+  venue: Agua
+
+- date: 1995-05-06
+  city: ROMA
+  venue: Frustone
+
+- date: 1995-05-11
+  city: ROMA
+  venue: Circolo degli Artisti
+
+- date: 1995-05-20
+  city: ROMA
+  venue: C.S.O.A. Pirateria
+
+- date: 1995-05-28
+  city: ROMA
+  venue: Circolo degli Artisti
+
+- date: 1995-06-10
+  city: ROMA
+  venue: C.S.O.A. Forte Prenestino
+
+- date: 1995-06-28
+  city: ROMA
+  venue: C.S.O.A. Pirateria
+
+- date: 1995-07-08
+  city: ASCOLI
+  venue: C.S.O.A.
+
+- date: 1995-09-16
+  city: ROMA
+  venue: C.S.O.A. Pirateria
+
+- date: 1995-10-17
+  city: ROMA
+  venue: Frustone
+
+- date: 1995-10-14
+  city: ASCOLI
+  venue: C.S.O.A.
+
+- date: 1995-11-10
+  city: ROMA
+  venue: Frustone
+
+- date: 1995-11-25
+  city: Tivoli (RM)
+  venue: LuogoMotore
+
+- date: 1995-12-08
+  city: Trani (BA)
+  venue: Hype Pub
+
+- date: 1996-01-25
+  city: ROMA
+  venue: Circolo degli Artisti
+
+- date: 1996-02-10
+  city: ROMA
+  venue: C.S.O.A. Forte Prenestino
+
+- date: 1996-02-17
+  city: Bocchignano (RI)
+  venue: Fausto’s
+
+- date: 1996-02-20
+  city: FIRENZE
+  venue: Auditorium Flog
+
+- date: 1996-04-27
+  city: Marino (RM)
+  venue: C.S.O.A. L’Asilo
+
+- date: 1996-05-01
+  city: ROMA
+  venue: Cobracor
+
+- date: 1996-05-17
+  city: ROMA
+  venue: Palladium
+
+- date: 1996-05-18
+  city: ROMA
+  venue: C.S.O.A. La Torre
+
+- date: 1996-05-25
+  city: SIENA
+  venue: Village Voice
+
+- date: 1996-05-31
+  city: LA SPEZIA
+  venue: La Scaletta
+
+- date: 1996-06-01
+  city: Trana (TO)
+  venue: Miwok
+
+- date: 1996-06-02
+  city: PISA
+  venue: C.S.O.A. Macchia Nera
+
+- date: 1996-06-09
+  city: ROMA
+  venue: C.S.O.A. Forte Prenestino
+
+- date: 1996-06-14
+  city: Legnago (VR)
+  venue: Babilonia
+
+- date: 1996-06-15
+  city: RIMINI
+  venue: Quadrare il Circolo
+
+- date: 1996-06-21
+  city: BOLOGNA
+  venue: Livello 57
+
+- date: 1996-06-22
+  city: CS.Giovanni (PC)
+  venue: IV Festival Beat
+
+- date: 1996-06-26
+  city: ROMA
+  venue: Campo dei Fiori
+
+- date: 1996-06-28
+  city: ROMA
+  venue: Alpheus
+
+- date: 1996-07-05
+  city: ROMA
+  venue: Foro Italico
+
+- date: 1996-07-06
+  city: Frascati (RM)
+  venue: Piazza Brodolino
+
+- date: 1996-07-20
+  city: Fidenza (PR)
+  venue: Festa de l’Unità
+
+- date: 1996-07-24
+  city: ROMA
+  venue: Massenzio
+
+- date: 1996-08-16
+  city: MODENA
+  venue: I Cortili
+
+- date: 1996-08-23
+  city: Civitavecchia (RM)
+  venue: Le Due Palme
+
+- date: 1996-09-20
+  city: Ostia (RM)
+  venue: C.S.O.A. Vittorio
+
+- date: 1996-09-21
+  city: ASCOLI
+  venue: C.S.O.A.
+
+- date: 1996-09-28
+  city: CAGLIARI
+  venue: Party
+
+- date: 1996-10-30
+  city: ROMA
+  venue: Piper Club
+
+- date: 1996-11-16
+  city: AOSTA
+  venue: Duit
+
+- date: 1996-11-22
+  city: ALESSANDRIA
+  venue: On The River
+
+- date: 1996-11-23
+  city: Sparone (TO)
+  venue: Imagen Pub
+
+- date: 1996-12-22
+  city: Boville (FR)
+  venue: Hot Ice Pub
+
+- date: 1996-12-31
+  city: BOLOGNA
+  venue: Livello 57
+
+- date: 1997-02-11
+  city: Boville (FR)
+  venue: Hot Ice Pub
+
+- date: 1997-03-07
+  city: ROMA
+  venue: Velvet Club
+
+- date: 1997-03-15
+  city: ROMA
+  venue: C.S. Brancaleone
+
+- date: 1997-03-22
+  city: MILANO
+  venue: BLOOM
+
+- date: 1997-04-04
+  city: ROMA
+  venue: S.Loreto
+
+- date: 1997-05-09
+  city: Ferentino (FR)
+  venue: Piazza
+
+- date: 1997-05-17
+  city: PESCARA
+  venue: 4 Vele
+
+- date: 1997-05-22
+  city: LIVORNO
+  venue: Sottocosta
+
+- date: 1997-05-23
+  city: PIACENZA
+  venue: KLM
+
+- date: 1997-05-24
+  city: Trana (TO)
+  venue: Miwok
+
+- date: 1997-05-25
+  city: Codevilla (PV)
+  venue: Thunder Road
+
+- date: 1997-05-29
+  city: ROMA
+  venue: Circolo degli Artisti
+
+- date: 1997-06-23
+  city: ROMA
+  venue: Villaggio Globale
+
+- date: 1997-07-12
+  city: Tocco da Casauria (PE)
+  venue: Piazza
+
+- date: 1997-08-01
+  city: Fara Sabina (RI)
+  venue: Piazza
+
+- date: 1997-10-31
+  city: GENOVA
+  venue: C.S.O.A. ZAPATA
+
+- date: 1997-11-07
+  city: ROMA
+  venue: Velvet Club
+
+- date: 1997-11-15
+  city: ROMA
+  venue: C.S. Brancaleone
+
+- date: 1997-12-06
+  city: AOSTA
+  venue: Peackock
+
+- date: 1997-12-07
+  city: Codevilla (PV)
+  venue: Thunder Road
+
+- date: 1998-03-28
+  city: ROMA
+  venue: C.S.O.A. Pirateria
+
+- date: 1998-04-14
+  city: ROMA
+  venue: C.S. Brancaleone
+
+- date: 1998-04-16
+  city: SALERNO
+  venue: Iroko
+
+- date: 1998-04-17
+  city: CASERTA
+  venue: Kingston
+
+- date: 1998-05-24
+  city: ROMA
+  venue: Jam Session
+
+- date: 1998-05-31
+  city: Santa Marinella (RM)
+  venue: Banzai Beach
+
+- date: 1998-06-05
+  city: ROMA
+  venue: Forum
+
+- date: 1998-06-19
+  city: Rimini
+  venue: Moe’s
+
+- date: 1998-07-09
+  city: Orte (RM)
+  venue: Orte di Note
+
+- date: 1998-07-18
+  city: ROMA
+  venue: Festa de l’Unità
+
+- date: 1998-07-25
+  city: Arma di Taggia (IM)
+  venue: Rock & Surf
+
+- date: 1998-09-12
+  city: FROSINONE
+  venue: Expo
+
+- date: 1998-09-18
+  city: MODENA
+  venue: Festa de l'Unità
+
+- date: 1998-09-19
+  city: Vigevano (PV)
+  venue: C.S. La Sede
+
+- date: 1998-09-20
+  city: AOSTA
+  venue: Progetto Giovani
+
+- date: 1998-10-09
+  city: TORINO
+  venue: Salone della Musica
+
+- date: 1998-10-17
+  city: Giove (TR)
+  venue: Green Pub
+
+- date: 1998-11-15
+  city: ROMA
+  venue: Memphis Belle
+
+- date: 1998-11-21
+  city: CASERTA
+  venue: Kingston
+
+- date: 1998-11-22
+  city: ROMA
+  venue: Memphis Belle
+
+- date: 1998-11-26
+  city: BOLOGNA
+  venue: Help (TMC2)
+
+- date: 1998-11-27
+  city: Carpi (MO)
+  venue: Kalinka
+
+- date: 1998-12-04
+  city: BERGAMO
+  venue: C.S. Pacì Paciana
+
+- date: 1998-12-05
+  city: Borgo val Tidone (PC)
+  venue: Kelly's
+
+- date: 1998-12-06
+  city: Codevilla (PV)
+  venue: Thunder Road
+
+- date: 1998-12-07
+  city: Orbetello (GR)
+  venue: Riposada
+
+- date: 1998-12-19
+  city: VICENZA
+  venue: Bar Sartea
+
+- date: 1999-01-29
+  city: Nogara (VR)
+  venue: Trattoria Pappa Buona
+
+- date: 1999-01-30
+  city: Campo Sanpiero (PD)
+  venue: Scuola
+
+- date: 1999-02-18
+  city: ROMA
+  venue: AKAB
+
+- date: 1999-02-25
+  city: ROMA
+  venue: Ex Magazzini Generali
+
+- date: 1999-03-05
+  city: SAN ANTONIO (TX)
+  venue: Reverbe Lounge
+
+- date: 1999-03-06
+  city: AUSTIN (TX)
+  venue:
+
+- date: 1999-03-08
+  city: EL PASO (TX)
+  venue: Wild at Hare
+
+- date: 1999-03-09
+  city: TUCSON (AZ)
+  venue: Double Zero
+
+- date: 1999-03-10
+  city: TEMPE (AZ)
+  venue: Cannery Row Tavern
+
+- date: 1999-03-11
+  city: LOS ANGELES (CA)
+  venue: KXLU
+
+- date: 1999-03-12
+  city: LOS ANGELES (CA)
+  venue: Delux Bar
+
+- date: 1999-03-13
+  city: SAN FRANCISCO (CA)
+  venue: Paradise Lounge
+
+- date: 1999-03-14
+  city: SAN JOSE' (CA)
+  venue: Fuel
+
+- date: 1999-03-19
+  city: PORTLAND (WA)
+  venue:
+
+- date: 1999-03-20
+  city: VANCOUVER
+  venue: Pic Club
+
+- date: 1999-03-24
+  city: CHAPEL HILL (NC)
+  venue: Local 506
+
+- date: 1999-03-25
+  city: SPARTANBURG (SC)
+  venue:
+
+- date: 1999-03-26
+  city: CHARLOTTE (NC)
+  venue: Vinyl Shop
+
+- date: 1999-03-26
+  city: CHARLOTTE (NC)
+  venue:
+
+- date: 1999-05-05
+  city: ROMA
+  venue: Internazionali di Tennis
+
+- date: 1999-05-06
+  city: ROMA
+  venue: Internazionali di Tennis
+
+- date: 1999-05-07
+  city: ROMA
+  venue: Internazionali di Tennis
+
+- date: 1999-05-08
+  city: ROMA
+  venue: Internazionali di Tennis
+
+- date: 1999-05-28
+  city: MESSINA
+  venue: Live Fest '99
+
+- date: 1999-10-29
+  city: CATANIA
+  venue: C.S.O.A. Esperia+G154
+
+- date: 1999-10-30
+  city: PALERMO
+  venue: Cantieri Culturali
+
+- date: 1999-10-31
+  city: Lamezia Terme (CZ)
+  venue: Ayers Rock One
+
+- date: 1999-11-04
+  city: TERAMO
+  venue: Millenium Pub
+
+- date: 1999-11-11
+  city: FIRENZE
+  venue: Auditorium Flog
+
+- date: 1999-11-28
+  city: FAENZA
+  venue: Meeting delle Etichette Indipendenti
+
+- date: 1999-12-03
+  city: VERONA
+  venue: Il Posto
+
+- date: 1999-12-15
+  city: Cinquale (MS)
+  venue: Baraonda
+
+- date: 2000-01-14
+  city: ROMA
+  venue: Ex Magazzini Generali
+
+- date: 2000-01-21
+  city: PISA
+  venue: Ciak
+
+- date: 2000-03-03
+  city: TORINO
+  venue: Hiroshima Monamur
+
+- date: 2000-03-04
+  city: BOLOGNA
+  venue: C.S.O.A. Livello 57
+
+- date: 2000-04-21
+  city: PERUGIA
+  venue: Due Lune
+
+- date: 2000-05-06
+  city: ROMA
+  venue: C.S.A. La Torre
+
+- date: 2000-05-16
+  city: ROMA
+  venue: Akab
+
+- date: 2000-07-08
+  city: Santa Marinella (RM)
+  venue: Expo
+
+- date: 2000-07-15
+  city: MODENA
+  venue: Festa
+
+- date: 2000-07-20
+  city: ROMA
+  venue: C.S. Villaggio Globale (IRA)
+
+- date: 2000-07-21
+  city: ROMA
+  venue: La Palma (Greenpeace)
+
+- date: 2001-03-01
+  city: ROMA
+  venue: Ex Magazzini Generali
+
+- date: 2001-07-20
+  city: Ceccano (FR)
+  venue: Indie Gesta
+
+- date: 2001-10-26
+  city: ROMA
+  venue: Locanda Atlantide
+
+- date: 2001-12-21
+  city: ROMA
+  venue: Lanificio Luciani
+
+- date: 2002-04-13
+  city: PALERMO
+  venue: I Candelai
+
+- date: 2002-05-17
+  city: ROMA
+  venue: Blue Cheese
+
+- date: 2003-01-23
+  city: ROMA
+  venue: Classico Village
+
+- date: 2003-05-09
+  city: Calella (Spain)
+  venue: Fabrica Llobet
+
+- date: 2003-06-07
+  city: Peveromo (MS)
+  venue: Beat Cafè
+
+- date: 2003-06-08
+  city: Peveromo (MS)
+  venue: Beat Cafè
+
+- date: 2003-07-27
+  city: Peveromo (MS)
+  venue: Beat Cafè
+
+- date: 2004-01-09
+  city: ROMA
+  venue: Metaverso
+
+- date: 2004-01-15
+  city: Cadorago (MI)
+  venue: Jessi's Surfin' Dinner
+
+- date: 2004-01-16
+  city: Ponsacco (PI)
+  venue: Dress Code
+
+- date: 2004-01-17
+  city: Roncà (VR)
+  venue: Jack the Ripper
+
+- date: 2005-01-08
+  city: ROMA
+  venue: Metaverso
+
+- date: 2005-06-26
+  city: ROMA
+  venue: Unione Capitolina Rugby
+
+- date: 2005-07-23
+  city: ROMA
+  venue: Secret's Cafè
+
+- date: 2005-07-30
+  city: Papigno (TR)
+  venue: Cinecittà Umbria Studios
+
+- date: 2006-01-05
+  city: ROMA
+  venue: Traffic
+
+- date: 2006-01-12
+  city: ROMA
+  venue: Micca Club (inaugurazione)

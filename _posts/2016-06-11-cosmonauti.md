@@ -26,5 +26,5 @@ title: Cosmonauti
 ## Live
 
 {% for gig in site.data.cosmonauti.gigs %}
-- {{gig.date | date_to_long_string}} in **{{gig.city}}**, {{gig.venue}}
+1. **{{gig.city}}** – {{gig.date | date_to_long_string}} @ {{gig.venue}}
 {% endfor %}
