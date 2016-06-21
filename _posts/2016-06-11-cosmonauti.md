@@ -5,7 +5,7 @@ title: Cosmonauti
 ## Members
 
 {% for member in site.data.cosmonauti.members %}
-- **{{member.nick}}** ({{member.name}} {{member.surname}}): {{member.instrument}} [from {{member.from}} to {{member.to}}]
+- {{member.name}} **{{member.nick}}**: {{member.instrument}} [from {{member.from}} to {{member.to}}]
 {% endfor %}
 
 ---

@@ -4,3 +4,31 @@
   instrument: Guitar
   from: 1990
   to: 2005
+
+- name: Andrea
+  surname:
+  nick:
+  instrument: Guitar
+  from: 1990
+  to: 2005
+
+- name: Alessandro
+  surname: Petrozzi
+  nick: Petrosh
+  instrument: Drum
+  from: 1994
+  to: 2006
+
+- name: Massimo
+  surname: Petrozzi
+  nick: Cosmomax
+  instrument: Bass
+  from: 1994
+  to: 2006
+
+- name: Valerio
+  surname: Borgianelli
+  nick: Borgia
+  instrument: Vibraphone
+  from: 2003
+  to: 2006
