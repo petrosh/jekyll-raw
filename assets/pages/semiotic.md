@@ -1,5 +1,7 @@
 ---
 title: Semiotic standard
+description: SVGs for sign processes and meaningful communication
+permalink: semiotic/
 ---
 
 Semiotics is the study of sign processes and meaningful communication.

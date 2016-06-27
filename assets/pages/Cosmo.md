@@ -1,5 +1,7 @@
 ---
 title: Cosmonauti
+description: Cosmonuti instrumental surf band
+permalink: Cosmo/
 ---
 
 ## Members
