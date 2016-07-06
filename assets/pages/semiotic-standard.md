@@ -1,8 +1,10 @@
 ---
 title: Semiotic standard
 description: SVGs for sign processes and meaningful communication
-permalink: semiotic/
+permalink: semiotic-standard/
 ---
+
+> Mostly from [typesetinthefuture](https://typesetinthefuture.com/2014/12/01/alien/)
 
 Semiotics is the study of sign processes and meaningful communication.
 ![Laundry semiotic]({{ site.baseurl }}/assets/images/semiotics/laundry.jpg){:class="border"}
