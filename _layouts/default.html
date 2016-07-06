@@ -1,17 +1,17 @@
 ---
 ---
 {% include head.html %}
-<header>
-  <a id="logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
-  {% include navigation.html %}
-</header>
-<section>
   <header>
-    <h1>{% if page.octicon %}<span class="mega-octicon octicon-{{ page.octicon }}"></span> {% endif %}{{ page.title }}</h1>
-    <h2>{% if page.type == 'post' %}{{ page.date | date_to_long_string }}{% else %}{{ page.description }}{% endif %}</h2>
-    {% include breadcrumb.html %}
+    <a id="logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    {% include navigation.html %}
   </header>
-  {{ content }}
-  {% if page.comments %}{% include comments.html %}{% endif %}
-</section>
+  <section>
+    <header>
+      <h1>{% if page.octicon %}<span class="mega-octicon octicon-{{ page.octicon }}"></span> {% endif %}{{ page.title }}</h1>
+      <h2>{% if page.type == 'post' %}{{ page.date | date_to_long_string }}{% else %}{{ page.description }}{% endif %}</h2>
+      {% include breadcrumb.html %}
+    </header>
+    {{ content }}
+    {% if page.comments %}{% include comments.html %}{% endif %}
+  </section>
 {% include footer.html %}

@@ -19,7 +19,7 @@ $nav-bg: whitesmoke
 html
   overflow-y: scroll
 
-// styles
+// layout
 body
   font-family: sans-serif
   color: $body-color
@@ -29,6 +29,9 @@ body
   margin: 0 auto
   // max-width: 960px
   line-height: 1.5rem
+main
+  max-width: 60em
+  margin: auto
 
 // colors
 a
@@ -38,12 +41,11 @@ a
   &:active
     opacity: .5
 
-body > header,
-body > section,
-body > footer
+body header,
+body footer
   padding: 1em 2em
 
-body > header
+main > header
   font-weight: bold
   color: $grey
   border-bottom: $border
@@ -160,3 +162,12 @@ ul li span.octicon
       font-style: oblique
     .row
       padding: 1em 0 .5em
+
+// Highlights (code)
+.highlighter-rouge
+  background: #f2f2f2
+  padding: 1px 1em
+
+// Live code
+span.result
+  background: #ffffe0
