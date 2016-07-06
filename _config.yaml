@@ -3,6 +3,11 @@ baseurl:
 description: Raw minimal theme for Jekyll
 permalink: pretty
 
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  auto_ids: true
+
 # Defaults
 defaults:
   -
