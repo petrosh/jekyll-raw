@@ -115,11 +115,15 @@ h1
   line-height: $font-size-huge
   margin: 0.83em 0 0 0
 
-h2
+header h2
   font-size: $font-size-medium
   font-weight: 100
   color: $grey
-  // font-style: oblique
+
+section > h2
+  padding: 0.8em 0 0.2em 0
+  line-height: 1.225
+  border-bottom: 1px solid #eee
 
 // lists
 
@@ -166,8 +170,8 @@ ul li span.octicon
 // Highlights (code)
 .highlighter-rouge
   background: #f2f2f2
-  padding: 1px 1em
-
+pre.highlight
+  padding: 1em
 // Live code
 span.result
   background: #ffffe0
