@@ -30,20 +30,10 @@ var trace = R.curry(function(tag, x) {
 var dasherize = R.compose(R.join('-'), R.map(toLowerCase), trace('after split'), R.split(' '), trace('after replace'), R.replace(/\s{2,}/ig, ' '));
 console.log(dasherize(string));
 
-function loadAssets(){
-	// Pure functions
-	document.querySelector('.result.words').innerHTML = '[' + words(string) + ']';
-	document.querySelector('.result.sentences').innerHTML = '['+R.map(words,R.map(adda,phrases))+']';
-	document.querySelector('.result.take').innerHTML = take(3, stringer);
-	document.querySelector('.result.snakecase').innerHTML = '['+R.map(snakeCase,R.map(adda,phrases))+']';
-	document.querySelector('.result.filterqs').innerHTML = '[' + filterQs(phrases) + ']';
-	// Currying
-	document.querySelector('.result.hasspace').innerHTML = '[' + findSpaces(phrases) + ']';
-}
-
-// init
-if (window.addEventListener)
-  window.addEventListener('load', loadAssets, false);
-else if (window.attachEvent)
-  window.attachEvent('onload', loadAssets);
-else window.onload = loadAssets;
+document.querySelector('.result.words').innerHTML = '[' + words(string) + ']';
+document.querySelector('.result.sentences').innerHTML = '['+R.map(words,R.map(adda,phrases))+']';
+document.querySelector('.result.take').innerHTML = take(3, stringer);
+document.querySelector('.result.snakecase').innerHTML = '['+R.map(snakeCase,R.map(adda,phrases))+']';
+document.querySelector('.result.filterqs').innerHTML = '[' + filterQs(phrases) + ']';
+// Currying
+document.querySelector('.result.hasspace').innerHTML = '[' + findSpaces(phrases) + ']';
