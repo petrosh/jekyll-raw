@@ -3,8 +3,6 @@ title: Ramda – Anything else would be a bold face lie
 js:
   - ramda/ramda.min
   - ramda/script
-css:
-  - syntax
 ---
 **Mostly from the gitBook** [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/)
 
