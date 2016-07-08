@@ -11,5 +11,9 @@
   <!-- NO HTTPS ?? -->
   <a id="githubRepository" href="{{ site.github.project_title }}"></a>
 </main>
+<!-- LOAD PAGE SCRIPTS -->
+{% if page.js %}
+{% for script in page.js %}<script src="{{ site.baseurl }}/assets/js/{{ script }}.js"></script>
+{% endfor %}{% endif %}
 </body>
 </html>

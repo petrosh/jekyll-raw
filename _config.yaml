@@ -23,6 +23,8 @@ js:
   - beyond-blog
 css:
   - style
+  - syntax
+  - posts
 
 # Custom css
 colors:
