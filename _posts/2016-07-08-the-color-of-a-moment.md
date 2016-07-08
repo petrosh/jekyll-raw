@@ -49,4 +49,4 @@ document.body.style.background = dayColor(dayFraction());
 ```
 
 And this will be in a couple of hours:
-<div class="boxed coupleofhours"><pre>dayColor(dayFraction() + (100/12));</pre></div>
+<div class="boxed coupleofhours"><pre>dayColor(dayFraction() + 1/12);</pre></div>
