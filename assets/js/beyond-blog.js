@@ -128,3 +128,17 @@ function reload(){
 function bold(string){
   return '<strong>' + string + '</strong>';
 }
+
+// dayFraction
+var dayFraction = function(p){
+  var out = (new Date().getTime()-(new Date(new Date().getFullYear()+'/'+(new Date().getMonth()+1)+'/'+new Date().getDate()).getTime()))/86400000;
+  if(typeof p == 'number') out = p;
+  return out;
+};
+
+var dayColor = function (p) {
+  var perc = dayFraction(p);
+  var twopi = 2*Math.PI;
+  var arr = [-Math.sin(perc*twopi), -Math.sin((perc+0.25)*twopi), Math.cos((perc-0.25)*twopi)];
+  return 'rgba(' +  arr.map(function(i){ return Math.floor(191.25+i*63.75); }).join(', ') + ', 0.7)';
+};
