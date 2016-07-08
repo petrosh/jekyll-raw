@@ -139,6 +139,6 @@ var dayFraction = function(p){
 var dayColor = function (p) {
   var perc = dayFraction(p);
   var twopi = 2*Math.PI;
-  var arr = [-Math.sin(perc*twopi), -Math.sin((perc+0.25)*twopi), Math.cos((perc-0.25)*twopi)];
+  var arr = [-Math.sin(perc*twopi), -Math.sin((perc+0.25)*twopi), Math.sin(perc*twopi)];
   return 'rgba(' +  arr.map(function(i){ return Math.floor(191.25+i*63.75); }).join(', ') + ', 0.7)';
 };
