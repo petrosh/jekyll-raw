@@ -7,7 +7,7 @@ You are about through <span class="dayfraction"></span>% of your day.
 
 It may seems a lot but if you start counting at midnight, waking up at 8:00am is 33.33% already.
 
-`% = hour * 100 / 24`.
+`% = hour * 100 / 24`
 
 ```js
 var dayFraction = function(){
