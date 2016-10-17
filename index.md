@@ -3,6 +3,8 @@ title: Home
 description: Hi!
 ---
 
+* [Domtools](domtools/)
+
 ## Posts
 
 {% for p in site.posts %}
