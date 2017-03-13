@@ -143,7 +143,7 @@ var starting_schema, starting_value, root="";
     var diagonal = d3.svg.diagonal()
         .projection(function(d) { return [d.y, d.x]; });
 
-    var svg = d3.select("header").append("svg")
+    var svg = d3.select("article").append("svg")
         .attr("width", width + margin.right + margin.left)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
