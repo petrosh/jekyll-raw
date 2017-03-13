@@ -22,7 +22,7 @@ defaults:
 js:
   - beyond-blog
 css:
-  - style
+  - default
   - syntax
   - posts
 
