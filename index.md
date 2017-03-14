@@ -17,13 +17,11 @@ description: Hi!
 
 ## Rests
 
-{% for p in site.posts %}
-* [{{ p.title }}]({{ site.baseurl }}{{ p.url }}) - {{ p.date | date_to_long_string }}
+{% for p in site.posts %}* [{{ p.title }}]({{ site.baseurl }}{{ p.url }}) - {{ p.date | date_to_long_string }}
 {% endfor %}
 
 ## GitHub
 
 {% assign pa = site.pages | where: 'parent', 'GitHub' | sort: 'menu' %}
-{% for p in pa %}
-* {% if p.octicon %}<span class="octicon octicon-{{ p.octicon }}"></span> {% endif %}[{{ p.title }}]({{ site.baseurl }}{{ p.url }})
+{% for p in pa %}* {% if p.octicon %}<span class="octicon octicon-{{ p.octicon }}"></span> {% endif %}[{{ p.title }}]({{ site.baseurl }}{{ p.url }})
 {% endfor %}
