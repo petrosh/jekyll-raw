@@ -3,7 +3,7 @@ function encrypt() {
 	var text = document.getElementById('text').value;
 	var url = "//petrosh.altervista.org/cryptopetrosh/encrypt.php?key=";
 	url += encodeURI(key) + "&text=" + encodeURI(text);
-	// fetch(url).then(console.log);
+	fetch(url).then(console.log);
 }
 
 function decrypt() {
@@ -11,5 +11,5 @@ function decrypt() {
 	var text = document.getElementById('text').value;
 	var url = "//petrosh.altervista.org/cryptopetrosh/decrypt.php?key=";
 	url += encodeURI(key) + "&text=" + encodeURI(text);
-	// fetch(url).then(console.log);
+	fetch(url).then(console.log);
 }
