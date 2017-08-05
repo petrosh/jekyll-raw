@@ -33,3 +33,7 @@ colors:
 
 # show breadcrumb
 show_breadcrumb: true
+
+# Gems
+gems:
+  - jekyll-coffeescript
