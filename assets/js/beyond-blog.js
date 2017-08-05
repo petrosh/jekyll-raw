@@ -99,7 +99,7 @@ function go(url,cb){
     true
   );
   xhrObject.setRequestHeader( 'Accept', mediatype );
-  xhrObject.send();
+  if (url.indexOf('localhost') == -1) xhrObject.send();
 }
 
 function convertDate(isoDate){
