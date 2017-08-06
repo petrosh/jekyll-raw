@@ -14,6 +14,7 @@ description: Hi!
 - [diarissues](diarissues/)
 - [carello.js](carello.js/)
 - [ask-spock](ask-spock/)
+- [MathJax](mathjax/)
 
 ## Rests
 
