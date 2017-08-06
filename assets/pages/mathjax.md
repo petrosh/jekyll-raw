@@ -105,10 +105,15 @@ Single symbol or formula inside curly braces.
 
 # Spaces
 
-- Thin `\,`
-- wider `\;`
-- Large `\quad`
-- Larger `\qquad`
+`quad` is space equal to the current font size.
+
+- $$a\!b$$ Negative `\!` -3/18 of a quad
+- $$ab$$ Default
+- $$a\,b$$ Small `\,` 3/18 of a quad
+- $$a\:b$$ Medium `\:` 4/18 of a quad
+- $$a\;b$$ Big `\;` 5/18 of a quad
+- $$a\quad b$$ `\quad`
+- $$a\qquad b$$ `\qquad` two quads
 
 # Boxed
 
