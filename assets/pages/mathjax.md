@@ -15,6 +15,13 @@ article { visibility: hidden; }
 .mjx-chtml { background-color: oldlace; }
 </style>
 
+**Table of contents**
+
+* toc
+{:toc}
+
+# Start
+
 **Include in page front matter as `js_absolute`**
 
 ```
@@ -38,11 +45,6 @@ article { visibility: hidden; }
   MathJax.Hub.Queue(function () { document.querySelector("article").style.visibility = "initial"; });
 </script>
 ```
-
-**Table of contents**
-
-* toc
-{:toc}
 
 # Syntax `$$`
 
@@ -95,3 +97,19 @@ Single symbol or formula inside curly braces.
 - `\frac ab` $$\frac ab$$
 - `\frac{a+1}{b+1}` $$\frac{a+1}{b+1}$$
 - `{a+1 \over b+1}` $${a+1 \over b+1}$$
+
+# Fonts
+
+- Sans serif $$\mathsf{mathsf}$$
+- Typewriter $$\mathtt{mathtt}$$
+
+# Spaces
+
+- Thin `\,`
+- wider `\;`
+- Large `\quad`
+- Larger `\qquad`
+
+# Boxed
+
+`$$\boxed{\operatorname{I'm\,boxed}}$$` gives $$\boxed{\operatorname{I'm\,boxed}}$$
