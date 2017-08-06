@@ -22,7 +22,7 @@
     {% endfor %}{% endif %}
 	<!-- LOAD PAGE ABSOLUTE SCRIPTS -->
   {% if page.js_absolute %}
-    {% for script in page.js_absolute %}<script src="{{ script }}" async></script>
+    {% for script in page.js_absolute %}<script src="{{ script }}"></script>
     {% endfor %}{% endif %}
 </head>
 <body>
