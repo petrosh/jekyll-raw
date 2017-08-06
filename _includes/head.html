@@ -20,6 +20,10 @@
   {% if site.js %}
     {% for script in site.js %}<script src="{{ site.baseurl }}/assets/js/{{ script }}.js"></script>
     {% endfor %}{% endif %}
+	<!-- LOAD PAGE ABSOLUTE SCRIPTS -->
+  {% if page.js_absolute %}
+    {% for script in page.js_absolute %}<script src="{{ script }}" async></script>
+    {% endfor %}{% endif %}
 </head>
 <body>
 <main>
