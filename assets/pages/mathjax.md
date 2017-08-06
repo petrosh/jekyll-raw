@@ -27,6 +27,18 @@ https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-A
 .mjx-chtml { background-color: oldlace; }
 ```
 
+**Hide until render is done**
+
+```css
+article { visibility: hidden; }
+```
+
+```html
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function () { document.querySelector("article").style.visibility = "initial"; });
+</script>
+```
+
 **Table of contents**
 
 * toc
@@ -48,7 +60,7 @@ Works with `\begin{equation}...\end{equation}`
 - `\ref{...}` replaced with equation number anchor link $$\ref{ciao}$$.
 - `\eqref{...}` replaced with parenthesis equation number anchor link $$\eqref{ciao}$$.
 
-**Activation**
+**Configuration**
 
 ```html
 <script type="text/x-mathjax-config">
@@ -77,6 +89,8 @@ Single symbol or formula inside curly braces.
 - `x_{i^2}` gives $$x_{i^2}$$
 
 # Fractions
+
+`frac` applies to the next two groups.
 
 - `\frac ab` $$\frac ab$$
 - `\frac{a+1}{b+1}` $$\frac{a+1}{b+1}$$
