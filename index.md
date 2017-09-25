@@ -15,6 +15,7 @@ description: Hi!
 - [carello.js](carello.js/)
 - [ask-spock](ask-spock/)
 - [MathJax](mathjax/)
+- [Ops](ops/)
 {% for p in site.posts %}* [{{ p.title }}]({{ site.baseurl }}{{ p.url }}) - {{ p.date | date_to_long_string }}
 {% endfor %}
 
