@@ -1,9 +1,19 @@
 ---
 ---
 # get hash
-hash = window.location.hash.substr(1)
+hash = window.location.hash.substr 1
 # stop if no hash
 if !hash then throw new Error 'Missing op parameter'
+slugize = (text) ->
+  text.toString().toLowerCase()
+    .replace /\s+/g, '-'     # Replace spaces with -
+    .replace /[^\w\-]+/g, '' # Remove all non-word chars
+    .replace /\-\-+/g, '-'   # Replace multiple - with single -
+    .replace /^-+/, ''       # Trim - from start of text
+    .replace /-+$/, ''      # Trim - from end of text
+titolize = (text) ->
+  str.replace /\w\S*/g, (txt) ->
+    txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
 # Create hash array
 hashArray = hash.split('&').map (e) -> e.split '='
 # Get op parameter
@@ -16,6 +26,13 @@ terms = equation.split '='
 console.log terms
 # Check operation
 switch op
+	# Stringize
+  when 'stringize'
+    str = terms[0].toString().toUpperCase()
+    res_string = "$$\\text{#{slugize(str)}}$$
+		$$\\text{#{titolize(terms[0])}}$$
+		$$\\text{#{str}}$$"
+
   # Proportion
   when 'proportion'
     if terms[1][1] == 'x'
