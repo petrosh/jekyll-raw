@@ -11,12 +11,12 @@ js_absolute: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?con
 
 - `proportion`<br>
 	<small><code>javascript: document.location = 'http://petrosh.github.io/ops/#op=proportion&' + prompt('Equation');</code></small>  
-	[example]({{ page.url }}#op=proportion&290/45=x/4)
+	[example]({{ site.baseurl }}{{ page.url }}#op=proportion&290/45=x/4)
 
 - `percent`<br>
 	<small><code>javascript: document.location = 'https://petrosh.github.io/ops/#op=percent&' + prompt('Equation');</code></small>  
-	[example]({{ page.url }}#op=percent&290/45)
+	[example]({{ site.baseurl }}{{ page.url }}#op=percent&290/45)
 
 - `stringize`<br>
 	<small><code>javascript: document.location = 'https://petrosh.github.io/ops/#op=stringize&' + prompt('String');</code></small>  
-	[example]({{ page.url }}#op=stringize&lo spettro di uno squillo di tromba)
+	[example]({{ site.baseurl }}{{ page.url }}#op=stringize&lo spettro di uno squillo di tromba)

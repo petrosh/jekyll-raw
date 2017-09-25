@@ -1,9 +1,15 @@
 ---
 ---
+# reload on anchor links
+links = document.querySelectorAll 'li p a'
+for i in links
+	# console.log i
+  i.addEventListener 'click', (e) => window.location.reload true
 # get hash
 hash = window.location.hash.substr 1
 # stop if no hash
 if !hash then throw new Error 'Missing op parameter'
+# slug function
 slugize = (text) ->
   text.toString().toLowerCase()
     .replace /\s+/g, '-'     # Replace spaces with -
@@ -11,6 +17,7 @@ slugize = (text) ->
     .replace /\-\-+/g, '-'   # Replace multiple - with single -
     .replace /^-+/, ''       # Trim - from start of text
     .replace /-+$/, ''      # Trim - from end of text
+# titol case function
 titolize = (text) ->
   str.replace /\w\S*/g, (txt) ->
     txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
