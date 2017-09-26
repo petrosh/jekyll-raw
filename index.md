@@ -8,6 +8,7 @@ description: Hi!
 - [Crypto](crypto/)
 - [Domtools](domtools/)
 - [Cosmo](Cosmo/)
+- [Books](books/)
 - [telemarket-tk](https://telemarket-tk.github.io/)
 - [Semiotic standard](semiotic-standard/)
 - [gitmarks](gitmarks/)
