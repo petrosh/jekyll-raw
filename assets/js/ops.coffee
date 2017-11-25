@@ -3,7 +3,7 @@
 # reload on anchor links
 links = document.querySelectorAll 'li p a'
 for i in links
-	# console.log i
+  # console.log i
   i.addEventListener 'click', (e) => window.location.reload true
 # get hash
 hash = window.location.hash.substr 1
@@ -33,12 +33,12 @@ terms = equation.split '='
 console.log terms
 # Check operation
 switch op
-	# Stringize
+  # Stringize
   when 'stringize'
     str = terms[0].toString().toUpperCase()
     res_string = "$$\\text{#{slugize(str)}}$$
-		$$\\text{#{titolize(terms[0])}}$$
-		$$\\text{#{str}}$$"
+      $$\\text{#{titolize(terms[0])}}$$
+      $$\\text{#{str}}$$"
 
   # Proportion
   when 'proportion'
@@ -48,7 +48,7 @@ switch op
       res = (terms[0][0]*terms[1][1])/terms[0][1]
     res_string = "$${#{terms[0][0]} \\over #{terms[0][1]}}={#{terms[1][0]} \\over #{terms[1][1]}}$$
 
-			$$\\boxed{x=#{res}}$$"
+  $$\\boxed{x=#{res}}$$"
   # Percent
   when 'percent'
     max = Math.max(terms[0][0],terms[0][1])
@@ -56,8 +56,8 @@ switch op
     res = (min*100)/max
     res_string =  "$${#{max} \\over #{min}}={#{100} \\over x}$$
 
-			$$\\boxed{x=#{res}}$$"
+      $$\\boxed{x=#{res}}$$"
 
 # output
 document.getElementById 'result'
-	.innerHTML += res_string
+  .innerHTML += res_string
