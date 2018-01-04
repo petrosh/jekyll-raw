@@ -3,7 +3,6 @@
 # reload on anchor links
 links = document.querySelectorAll 'li p a'
 for i in links
-  # console.log i
   i.addEventListener 'click', (e) => window.location.reload true
 # get hash
 hash = window.location.hash.substr 1
@@ -30,7 +29,6 @@ equation = hash.replace "op=#{op}&", ''
 # Split equation in terms
 terms = equation.split '='
   .map (e) -> e.split '/'
-console.log terms
 # Check operation
 switch op
   # Stringize
@@ -42,6 +40,9 @@ switch op
 
   # Proportion
   when 'proportion'
+    for first_term, i in terms
+      for second_term, j in first_term
+        terms[i][j] = second_term.replace ',', '.'
     if terms[1][1] == 'x'
       res = (terms[0][1]*terms[1][0])/terms[0][0]
     if terms[1][0] == 'x'
@@ -51,6 +52,9 @@ switch op
   $$\\boxed{x=#{res}}$$"
   # Percent
   when 'percent'
+    for first_term, i in terms
+      for second_term, j in first_term
+        terms[i][j] = second_term.replace ',', '.'
     max = Math.max(terms[0][0],terms[0][1])
     min = Math.min(terms[0][0],terms[0][1])
     res = (min*100)/max
