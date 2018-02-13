@@ -11,12 +11,16 @@ js_absolute: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?con
 
 - `proportion`<br>
 	<small><code>javascript: document.location = 'http://petrosh.github.io/ops/#op=proportion&' + prompt('Equation');</code></small>  
-	[example]({{ site.baseurl }}{{ page.url }}#op=proportion&290/45=x/4)
+	Examples  
+  - [`290/45.5=x/4`]({{ site.baseurl }}{{ page.url }}#op=proportion&290/45.5=x/4)
+  - [`45,5/290=4/x`]({{ site.baseurl }}{{ page.url }}#op=proportion&45,5/290=4/x)
 
 - `percent`<br>
 	<small><code>javascript: document.location = 'https://petrosh.github.io/ops/#op=percent&' + prompt('Equation');</code></small>  
-	[example]({{ site.baseurl }}{{ page.url }}#op=percent&290/45)
+	Examples  
+	- [`290/45.5`]({{ site.baseurl }}{{ page.url }}#op=percent&290/45.5)
+	- [`45,5/290`]({{ site.baseurl }}{{ page.url }}#op=percent&45,5/290)
 
 - `stringize`<br>
 	<small><code>javascript: document.location = 'https://petrosh.github.io/ops/#op=stringize&' + prompt('String');</code></small>  
-	[example]({{ site.baseurl }}{{ page.url }}#op=stringize&lo spettro di uno squillo di tromba)
+	Example [`lo spettro di uno squillo di tromba`]({{ site.baseurl }}{{ page.url }}#op=stringize&lo spettro di uno squillo di tromba)
