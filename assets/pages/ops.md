@@ -18,8 +18,8 @@ js_absolute: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?con
 - `percent`<br>
 	<small><code>javascript: document.location = 'https://petrosh.github.io/ops/#op=percent&' + prompt('Equation');</code></small>  
 	Examples  
-	- [`290/45.5`]({{ site.baseurl }}{{ page.url }}#op=percent&290/45.5)
-	- [`45,5/290`]({{ site.baseurl }}{{ page.url }}#op=percent&45,5/290)
+	- [`290/45.5`]({{ page.url | absolute_url }}#op=percent&290/45.5)
+	- [`45,5/290`]({{ page.url | absolute_url }}#op=percent&45,5/290)
 
 - `stringize`<br>
 	<small><code>javascript: document.location = 'https://petrosh.github.io/ops/#op=stringize&' + prompt('String');</code></small>  
